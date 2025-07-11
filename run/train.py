@@ -28,6 +28,7 @@ def train_net(cfg):
     torch.backends.cudnn.benchmark = True
     # Start a new wandb run to track this script.
     run = wandb.init(
+        name='egiinet_clean'
         # Set the wandb entity where your project will be logged (generally your team name).
         entity="kshitijkale1212",
         # Set the wandb project where this run will be logged.
