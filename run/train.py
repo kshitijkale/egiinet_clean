@@ -28,7 +28,6 @@ def train_net(cfg):
     torch.backends.cudnn.benchmark = True
     # Start a new wandb run to track this script.
     run = wandb.init(
-        name='egiinet_clean'
         # Set the wandb entity where your project will be logged (generally your team name).
         entity="kshitijkale1212",
         # Set the wandb project where this run will be logged.
@@ -40,6 +39,7 @@ def train_net(cfg):
             "dataset": "shapenet_vipc_subset",
             "epochs": 24,
         },
+        name='egiinet_clean',
     )
 
     ViPC_train = ViPCDataLoader(os.path.join(dino_path,'fummy.txt'),
